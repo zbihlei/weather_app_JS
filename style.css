@@ -105,12 +105,10 @@ body{
 }
 
 .container_in{
-    height: auto;
-    
+    height: auto; 
     animation-name: smooth;
     animation-duration: 1s;
 }
-
 
 @keyframes smooth {
     from {
