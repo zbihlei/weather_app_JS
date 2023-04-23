@@ -1,0 +1,124 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(154, 215, 254);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 30px;
+    width: 300px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 'search''immage''weathertext';
+    position: relative;
+    
+}
+.search_wrapp{
+    grid-area: search;
+    display: flex;
+    width: 100%;
+    height: 1.5rem;
+    justify-content: space-around;
+}
+.search{
+    height: 1.5rem;
+    width: 80%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid gray;
+}
+.left_loc{
+    font-size: 24px;
+    position: absolute;
+    top: 33px;
+    left: 20px
+}
+.right_search{
+    font-size: 26px;
+    position: absolute;
+    top: 31px;
+    right:20px;
+    transition: .6s;
+}
+.right_search:hover{
+    color:rgb(154, 215, 254);
+}
+
+/* 404 */
+
+.not-found{ 
+
+  animation-name: smooth;
+  animation-duration: 1s;
+  display: none;
+  grid-area: immage;
+  margin: 0 auto;
+}
+
+.notfound404{
+    font-size: 70px;
+    line-height: 140px;
+    color: rgb(51, 148, 208);
+}
+.text404{
+    color: rgb(51, 148, 208);
+    font-size: 18px;
+    text-align: center;
+    align-self: bottom;
+}
+/* 200 */
+
+.found{
+    animation-name: smooth;
+    animation-duration: 1s;
+    display: none;
+}
+.immage_logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  margin: 30px;
+}
+
+.immage_logo img{
+    width: 130px;
+    height: 130px;
+}
+
+.weather_text{
+    text-align: center;
+    font-size: 16px;
+    grid-area: weathertext;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+.weather_text p{
+    margin: 0;
+}
+
+.container_in{
+    height: auto;
+    
+    animation-name: smooth;
+    animation-duration: 1s;
+}
+
+
+@keyframes smooth {
+    from {
+		opacity: 0;
+		transform: translate3d(0, -5%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
